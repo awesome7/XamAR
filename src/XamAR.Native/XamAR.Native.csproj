@@ -1,0 +1,31 @@
+<Project Sdk="MSBuild.Sdk.Extras">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;Xamarin.iOS10;MonoAndroid9.0;MonoAndroid10.0;MonoAndroid11.0;</TargetFrameworks>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XamAR.Core\XamAR.Core.csproj" />
+    <ProjectReference Include="..\XamAR.Diagnostics\XamAR.Diagnostics.csproj" />
+    <ProjectReference Include="..\XamAR\XamAR.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Platforms\**\*.cs" />
+    <None Include="Platforms\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+    <Compile Include="Platforms\iOS\**\*.cs" />
+    <ProjectReference Include="..\XamAR.Platform.iOS.SceneKit\XamAR.Platform.iOS.SceneKit.csproj" />
+    <ProjectReference Include="..\XamAR.UI.iOS.SceneKit\XamAR.UI.iOS.SceneKit.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+    <Compile Include="Platforms\Android\**\*.cs" />
+    <ProjectReference Include="..\XamAR.Platform.Android.Sceneform\XamAR.Platform.Android.Sceneform.csproj" />
+    <ProjectReference Include="..\XamAR.UI.Android.Sceneform\XamAR.UI.Android.Sceneform.csproj" />
+  </ItemGroup>
+
+</Project>

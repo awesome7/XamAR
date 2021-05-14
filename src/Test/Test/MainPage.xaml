@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     xmlns:controls="clr-namespace:Test.Controls;assembly=Test"
+     xmlns:views="clr-namespace:XamAR.UI.Forms.Views;assembly=XamAR.UI.Forms"
+     xmlns:vm="clr-namespace:Test.ViewModels"
+     x:Class="Test.MainPage">
+
+    <ContentPage.Resources>
+        <ControlTemplate x:Key="checkBoxTemplate">
+            <StackLayout Orientation="Horizontal" BindingContext="{Binding Source={RelativeSource TemplatedParent}}">
+                <CheckBox IsChecked="{TemplateBinding IsChecked, Mode=TwoWay}"></CheckBox>
+                <Label Text="{TemplateBinding Text}"></Label>
+            </StackLayout>
+        </ControlTemplate>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="5" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="20"/>
+        </Frame>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <views:ARView BackgroundColor="AliceBlue"/>
+            <Label x:Name="text" Padding="30,0,30,0" FontSize="11" BackgroundColor="#aaffffff"
+                   HorizontalOptions="Start" VerticalOptions="Start"/>
+            <StackLayout HorizontalOptions="End" VerticalOptions="Start" BackgroundColor="#aaffffff">
+                <controls:CheckBoxText 
+                    ControlTemplate="{StaticResource checkBoxTemplate}"
+                    IsChecked="{Binding DrawPositions, Mode=TwoWay}"
+                    Text="Show Positions">
+                </controls:CheckBoxText>
+                <controls:CheckBoxText 
+                    ControlTemplate="{StaticResource checkBoxTemplate}"
+                    IsChecked="{Binding DrawDirections, Mode=TwoWay}"
+                    Text="Show Directions">
+                </controls:CheckBoxText>
+                <Label>
+                    <Label.Text>
+                        <MultiBinding StringFormat="Rate frm/calc: {0}/{1}">
+                            <Binding Path="FrameRate"/>
+                            <Binding Path="CalculationRate"/>
+                        </MultiBinding>
+                    </Label.Text>
+                </Label>
+                <Picker ItemsSource="{Binding Source={Static vm:MainPageViewModel.SkipFrameItems}}"
+                        SelectedItem="{Binding SkipFrames}">
+                </Picker>
+            </StackLayout>
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>
