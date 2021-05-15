@@ -1043,6 +1043,7 @@ namespace Test.Droid
 			global::XamAR.Forms.Resource.Drawable.notification_template_icon_low_bg = global::Test.Droid.Resource.Drawable.notification_template_icon_low_bg;
 			global::XamAR.Forms.Resource.Drawable.notification_tile_bg = global::Test.Droid.Resource.Drawable.notification_tile_bg;
 			global::XamAR.Forms.Resource.Drawable.notify_panel_notification_icon_bg = global::Test.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::XamAR.Forms.Resource.Drawable.sceneform_hand_phone = global::Test.Droid.Resource.Drawable.sceneform_hand_phone;
 			global::XamAR.Forms.Resource.Drawable.sceneform_plane = global::Test.Droid.Resource.Drawable.sceneform_plane;
 			global::XamAR.Forms.Resource.Drawable.tooltip_frame_dark = global::Test.Droid.Resource.Drawable.tooltip_frame_dark;
 			global::XamAR.Forms.Resource.Drawable.tooltip_frame_light = global::Test.Droid.Resource.Drawable.tooltip_frame_light;
@@ -1214,6 +1215,9 @@ namespace Test.Droid
 			global::XamAR.Forms.Resource.Id.right_side = global::Test.Droid.Resource.Id.right_side;
 			global::XamAR.Forms.Resource.Id.save_non_transition_alpha = global::Test.Droid.Resource.Id.save_non_transition_alpha;
 			global::XamAR.Forms.Resource.Id.save_overlay_view = global::Test.Droid.Resource.Id.save_overlay_view;
+			global::XamAR.Forms.Resource.Id.sceneform_ar_scene_view = global::Test.Droid.Resource.Id.sceneform_ar_scene_view;
+			global::XamAR.Forms.Resource.Id.sceneform_hand_image = global::Test.Droid.Resource.Id.sceneform_hand_image;
+			global::XamAR.Forms.Resource.Id.sceneform_hand_layout = global::Test.Droid.Resource.Id.sceneform_hand_layout;
 			global::XamAR.Forms.Resource.Id.screen = global::Test.Droid.Resource.Id.screen;
 			global::XamAR.Forms.Resource.Id.scroll = global::Test.Droid.Resource.Id.scroll;
 			global::XamAR.Forms.Resource.Id.scrollable = global::Test.Droid.Resource.Id.scrollable;
@@ -1392,6 +1396,8 @@ namespace Test.Droid
 			global::XamAR.Forms.Resource.Layout.notification_template_part_chronometer = global::Test.Droid.Resource.Layout.notification_template_part_chronometer;
 			global::XamAR.Forms.Resource.Layout.notification_template_part_time = global::Test.Droid.Resource.Layout.notification_template_part_time;
 			global::XamAR.Forms.Resource.Layout.RootLayout = global::Test.Droid.Resource.Layout.RootLayout;
+			global::XamAR.Forms.Resource.Layout.sceneform_plane_discovery_layout = global::Test.Droid.Resource.Layout.sceneform_plane_discovery_layout;
+			global::XamAR.Forms.Resource.Layout.sceneform_ux_fragment_layout = global::Test.Droid.Resource.Layout.sceneform_ux_fragment_layout;
 			global::XamAR.Forms.Resource.Layout.select_dialog_item_material = global::Test.Droid.Resource.Layout.select_dialog_item_material;
 			global::XamAR.Forms.Resource.Layout.select_dialog_multichoice_material = global::Test.Droid.Resource.Layout.select_dialog_multichoice_material;
 			global::XamAR.Forms.Resource.Layout.select_dialog_singlechoice_material = global::Test.Droid.Resource.Layout.select_dialog_singlechoice_material;
@@ -1403,6 +1409,9 @@ namespace Test.Droid
 			global::XamAR.Forms.Resource.Raw.keep_arcore = global::Test.Droid.Resource.Raw.keep_arcore;
 			global::XamAR.Forms.Resource.Raw.sceneform_camera_material = global::Test.Droid.Resource.Raw.sceneform_camera_material;
 			global::XamAR.Forms.Resource.Raw.sceneform_default_light_probe = global::Test.Droid.Resource.Raw.sceneform_default_light_probe;
+			global::XamAR.Forms.Resource.Raw.sceneform_face_mesh = global::Test.Droid.Resource.Raw.sceneform_face_mesh;
+			global::XamAR.Forms.Resource.Raw.sceneform_face_mesh_occluder = global::Test.Droid.Resource.Raw.sceneform_face_mesh_occluder;
+			global::XamAR.Forms.Resource.Raw.sceneform_footprint = global::Test.Droid.Resource.Raw.sceneform_footprint;
 			global::XamAR.Forms.Resource.Raw.sceneform_opaque_colored_material = global::Test.Droid.Resource.Raw.sceneform_opaque_colored_material;
 			global::XamAR.Forms.Resource.Raw.sceneform_opaque_textured_material = global::Test.Droid.Resource.Raw.sceneform_opaque_textured_material;
 			global::XamAR.Forms.Resource.Raw.sceneform_plane_material = global::Test.Droid.Resource.Raw.sceneform_plane_material;
@@ -1450,6 +1459,7 @@ namespace Test.Droid
 			global::XamAR.Forms.Resource.String.fallback_menu_item_share_link = global::Test.Droid.Resource.String.fallback_menu_item_share_link;
 			global::XamAR.Forms.Resource.String.hello = global::Test.Droid.Resource.String.hello;
 			global::XamAR.Forms.Resource.String.hide_bottom_view_on_scroll_behavior = global::Test.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::XamAR.Forms.Resource.String.lib_name = global::Test.Droid.Resource.String.lib_name;
 			global::XamAR.Forms.Resource.String.mtrl_chip_close_icon_content_description = global::Test.Droid.Resource.String.mtrl_chip_close_icon_content_description;
 			global::XamAR.Forms.Resource.String.overflow_tab_title = global::Test.Droid.Resource.String.overflow_tab_title;
 			global::XamAR.Forms.Resource.String.password_toggle_content_description = global::Test.Droid.Resource.String.password_toggle_content_description;
@@ -2816,6 +2826,7 @@ namespace Test.Droid
 			global::XamAR.Platform.Android.Sceneform.Resource.Drawable.notification_template_icon_low_bg = global::Test.Droid.Resource.Drawable.notification_template_icon_low_bg;
 			global::XamAR.Platform.Android.Sceneform.Resource.Drawable.notification_tile_bg = global::Test.Droid.Resource.Drawable.notification_tile_bg;
 			global::XamAR.Platform.Android.Sceneform.Resource.Drawable.notify_panel_notification_icon_bg = global::Test.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::XamAR.Platform.Android.Sceneform.Resource.Drawable.sceneform_hand_phone = global::Test.Droid.Resource.Drawable.sceneform_hand_phone;
 			global::XamAR.Platform.Android.Sceneform.Resource.Drawable.sceneform_plane = global::Test.Droid.Resource.Drawable.sceneform_plane;
 			global::XamAR.Platform.Android.Sceneform.Resource.Id.actions = global::Test.Droid.Resource.Id.actions;
 			global::XamAR.Platform.Android.Sceneform.Resource.Id.action_container = global::Test.Droid.Resource.Id.action_container;
@@ -2857,6 +2868,9 @@ namespace Test.Droid
 			global::XamAR.Platform.Android.Sceneform.Resource.Id.right = global::Test.Droid.Resource.Id.right;
 			global::XamAR.Platform.Android.Sceneform.Resource.Id.right_icon = global::Test.Droid.Resource.Id.right_icon;
 			global::XamAR.Platform.Android.Sceneform.Resource.Id.right_side = global::Test.Droid.Resource.Id.right_side;
+			global::XamAR.Platform.Android.Sceneform.Resource.Id.sceneform_ar_scene_view = global::Test.Droid.Resource.Id.sceneform_ar_scene_view;
+			global::XamAR.Platform.Android.Sceneform.Resource.Id.sceneform_hand_image = global::Test.Droid.Resource.Id.sceneform_hand_image;
+			global::XamAR.Platform.Android.Sceneform.Resource.Id.sceneform_hand_layout = global::Test.Droid.Resource.Id.sceneform_hand_layout;
 			global::XamAR.Platform.Android.Sceneform.Resource.Id.start = global::Test.Droid.Resource.Id.start;
 			global::XamAR.Platform.Android.Sceneform.Resource.Id.tag_transition_group = global::Test.Droid.Resource.Id.tag_transition_group;
 			global::XamAR.Platform.Android.Sceneform.Resource.Id.tag_unhandled_key_event_manager = global::Test.Droid.Resource.Id.tag_unhandled_key_event_manager;
@@ -2878,10 +2892,15 @@ namespace Test.Droid
 			global::XamAR.Platform.Android.Sceneform.Resource.Layout.notification_template_icon_group = global::Test.Droid.Resource.Layout.notification_template_icon_group;
 			global::XamAR.Platform.Android.Sceneform.Resource.Layout.notification_template_part_chronometer = global::Test.Droid.Resource.Layout.notification_template_part_chronometer;
 			global::XamAR.Platform.Android.Sceneform.Resource.Layout.notification_template_part_time = global::Test.Droid.Resource.Layout.notification_template_part_time;
+			global::XamAR.Platform.Android.Sceneform.Resource.Layout.sceneform_plane_discovery_layout = global::Test.Droid.Resource.Layout.sceneform_plane_discovery_layout;
+			global::XamAR.Platform.Android.Sceneform.Resource.Layout.sceneform_ux_fragment_layout = global::Test.Droid.Resource.Layout.sceneform_ux_fragment_layout;
 			global::XamAR.Platform.Android.Sceneform.Resource.Layout.@__arcore_education = global::Test.Droid.Resource.Layout.@__arcore_education;
 			global::XamAR.Platform.Android.Sceneform.Resource.Raw.keep_arcore = global::Test.Droid.Resource.Raw.keep_arcore;
 			global::XamAR.Platform.Android.Sceneform.Resource.Raw.sceneform_camera_material = global::Test.Droid.Resource.Raw.sceneform_camera_material;
 			global::XamAR.Platform.Android.Sceneform.Resource.Raw.sceneform_default_light_probe = global::Test.Droid.Resource.Raw.sceneform_default_light_probe;
+			global::XamAR.Platform.Android.Sceneform.Resource.Raw.sceneform_face_mesh = global::Test.Droid.Resource.Raw.sceneform_face_mesh;
+			global::XamAR.Platform.Android.Sceneform.Resource.Raw.sceneform_face_mesh_occluder = global::Test.Droid.Resource.Raw.sceneform_face_mesh_occluder;
+			global::XamAR.Platform.Android.Sceneform.Resource.Raw.sceneform_footprint = global::Test.Droid.Resource.Raw.sceneform_footprint;
 			global::XamAR.Platform.Android.Sceneform.Resource.Raw.sceneform_opaque_colored_material = global::Test.Droid.Resource.Raw.sceneform_opaque_colored_material;
 			global::XamAR.Platform.Android.Sceneform.Resource.Raw.sceneform_opaque_textured_material = global::Test.Droid.Resource.Raw.sceneform_opaque_textured_material;
 			global::XamAR.Platform.Android.Sceneform.Resource.Raw.sceneform_plane_material = global::Test.Droid.Resource.Raw.sceneform_plane_material;
@@ -2891,6 +2910,7 @@ namespace Test.Droid
 			global::XamAR.Platform.Android.Sceneform.Resource.Raw.sceneform_view_renderable = global::Test.Droid.Resource.Raw.sceneform_view_renderable;
 			global::XamAR.Platform.Android.Sceneform.Resource.String.app_name = global::Test.Droid.Resource.String.app_name;
 			global::XamAR.Platform.Android.Sceneform.Resource.String.hello = global::Test.Droid.Resource.String.hello;
+			global::XamAR.Platform.Android.Sceneform.Resource.String.lib_name = global::Test.Droid.Resource.String.lib_name;
 			global::XamAR.Platform.Android.Sceneform.Resource.String.status_bar_notification_info_overflow = global::Test.Droid.Resource.String.status_bar_notification_info_overflow;
 			global::XamAR.Platform.Android.Sceneform.Resource.String.@__arcore_cancel = global::Test.Droid.Resource.String.@__arcore_cancel;
 			global::XamAR.Platform.Android.Sceneform.Resource.String.@__arcore_continue = global::Test.Droid.Resource.String.@__arcore_continue;
@@ -3020,6 +3040,7 @@ namespace Test.Droid
 			global::XamAR.UI.Android.Sceneform.Resource.Drawable.notification_template_icon_low_bg = global::Test.Droid.Resource.Drawable.notification_template_icon_low_bg;
 			global::XamAR.UI.Android.Sceneform.Resource.Drawable.notification_tile_bg = global::Test.Droid.Resource.Drawable.notification_tile_bg;
 			global::XamAR.UI.Android.Sceneform.Resource.Drawable.notify_panel_notification_icon_bg = global::Test.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::XamAR.UI.Android.Sceneform.Resource.Drawable.sceneform_hand_phone = global::Test.Droid.Resource.Drawable.sceneform_hand_phone;
 			global::XamAR.UI.Android.Sceneform.Resource.Drawable.sceneform_plane = global::Test.Droid.Resource.Drawable.sceneform_plane;
 			global::XamAR.UI.Android.Sceneform.Resource.Id.actions = global::Test.Droid.Resource.Id.actions;
 			global::XamAR.UI.Android.Sceneform.Resource.Id.action_container = global::Test.Droid.Resource.Id.action_container;
@@ -3061,6 +3082,9 @@ namespace Test.Droid
 			global::XamAR.UI.Android.Sceneform.Resource.Id.right = global::Test.Droid.Resource.Id.right;
 			global::XamAR.UI.Android.Sceneform.Resource.Id.right_icon = global::Test.Droid.Resource.Id.right_icon;
 			global::XamAR.UI.Android.Sceneform.Resource.Id.right_side = global::Test.Droid.Resource.Id.right_side;
+			global::XamAR.UI.Android.Sceneform.Resource.Id.sceneform_ar_scene_view = global::Test.Droid.Resource.Id.sceneform_ar_scene_view;
+			global::XamAR.UI.Android.Sceneform.Resource.Id.sceneform_hand_image = global::Test.Droid.Resource.Id.sceneform_hand_image;
+			global::XamAR.UI.Android.Sceneform.Resource.Id.sceneform_hand_layout = global::Test.Droid.Resource.Id.sceneform_hand_layout;
 			global::XamAR.UI.Android.Sceneform.Resource.Id.start = global::Test.Droid.Resource.Id.start;
 			global::XamAR.UI.Android.Sceneform.Resource.Id.tag_transition_group = global::Test.Droid.Resource.Id.tag_transition_group;
 			global::XamAR.UI.Android.Sceneform.Resource.Id.tag_unhandled_key_event_manager = global::Test.Droid.Resource.Id.tag_unhandled_key_event_manager;
@@ -3082,10 +3106,15 @@ namespace Test.Droid
 			global::XamAR.UI.Android.Sceneform.Resource.Layout.notification_template_icon_group = global::Test.Droid.Resource.Layout.notification_template_icon_group;
 			global::XamAR.UI.Android.Sceneform.Resource.Layout.notification_template_part_chronometer = global::Test.Droid.Resource.Layout.notification_template_part_chronometer;
 			global::XamAR.UI.Android.Sceneform.Resource.Layout.notification_template_part_time = global::Test.Droid.Resource.Layout.notification_template_part_time;
+			global::XamAR.UI.Android.Sceneform.Resource.Layout.sceneform_plane_discovery_layout = global::Test.Droid.Resource.Layout.sceneform_plane_discovery_layout;
+			global::XamAR.UI.Android.Sceneform.Resource.Layout.sceneform_ux_fragment_layout = global::Test.Droid.Resource.Layout.sceneform_ux_fragment_layout;
 			global::XamAR.UI.Android.Sceneform.Resource.Layout.@__arcore_education = global::Test.Droid.Resource.Layout.@__arcore_education;
 			global::XamAR.UI.Android.Sceneform.Resource.Raw.keep_arcore = global::Test.Droid.Resource.Raw.keep_arcore;
 			global::XamAR.UI.Android.Sceneform.Resource.Raw.sceneform_camera_material = global::Test.Droid.Resource.Raw.sceneform_camera_material;
 			global::XamAR.UI.Android.Sceneform.Resource.Raw.sceneform_default_light_probe = global::Test.Droid.Resource.Raw.sceneform_default_light_probe;
+			global::XamAR.UI.Android.Sceneform.Resource.Raw.sceneform_face_mesh = global::Test.Droid.Resource.Raw.sceneform_face_mesh;
+			global::XamAR.UI.Android.Sceneform.Resource.Raw.sceneform_face_mesh_occluder = global::Test.Droid.Resource.Raw.sceneform_face_mesh_occluder;
+			global::XamAR.UI.Android.Sceneform.Resource.Raw.sceneform_footprint = global::Test.Droid.Resource.Raw.sceneform_footprint;
 			global::XamAR.UI.Android.Sceneform.Resource.Raw.sceneform_opaque_colored_material = global::Test.Droid.Resource.Raw.sceneform_opaque_colored_material;
 			global::XamAR.UI.Android.Sceneform.Resource.Raw.sceneform_opaque_textured_material = global::Test.Droid.Resource.Raw.sceneform_opaque_textured_material;
 			global::XamAR.UI.Android.Sceneform.Resource.Raw.sceneform_plane_material = global::Test.Droid.Resource.Raw.sceneform_plane_material;
@@ -3095,6 +3124,7 @@ namespace Test.Droid
 			global::XamAR.UI.Android.Sceneform.Resource.Raw.sceneform_view_renderable = global::Test.Droid.Resource.Raw.sceneform_view_renderable;
 			global::XamAR.UI.Android.Sceneform.Resource.String.app_name = global::Test.Droid.Resource.String.app_name;
 			global::XamAR.UI.Android.Sceneform.Resource.String.hello = global::Test.Droid.Resource.String.hello;
+			global::XamAR.UI.Android.Sceneform.Resource.String.lib_name = global::Test.Droid.Resource.String.lib_name;
 			global::XamAR.UI.Android.Sceneform.Resource.String.status_bar_notification_info_overflow = global::Test.Droid.Resource.String.status_bar_notification_info_overflow;
 			global::XamAR.UI.Android.Sceneform.Resource.String.@__arcore_cancel = global::Test.Droid.Resource.String.@__arcore_cancel;
 			global::XamAR.UI.Android.Sceneform.Resource.String.@__arcore_continue = global::Test.Droid.Resource.String.@__arcore_continue;
@@ -4135,6 +4165,7 @@ namespace Test.Droid
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Drawable.notification_template_icon_low_bg = global::Test.Droid.Resource.Drawable.notification_template_icon_low_bg;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Drawable.notification_tile_bg = global::Test.Droid.Resource.Drawable.notification_tile_bg;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Drawable.notify_panel_notification_icon_bg = global::Test.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::XamAR.UI.Forms.Android.Sceneform.Resource.Drawable.sceneform_hand_phone = global::Test.Droid.Resource.Drawable.sceneform_hand_phone;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Drawable.sceneform_plane = global::Test.Droid.Resource.Drawable.sceneform_plane;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Drawable.tooltip_frame_dark = global::Test.Droid.Resource.Drawable.tooltip_frame_dark;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Drawable.tooltip_frame_light = global::Test.Droid.Resource.Drawable.tooltip_frame_light;
@@ -4267,6 +4298,9 @@ namespace Test.Droid
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Id.right_icon = global::Test.Droid.Resource.Id.right_icon;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Id.right_side = global::Test.Droid.Resource.Id.right_side;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Id.save_non_transition_alpha = global::Test.Droid.Resource.Id.save_non_transition_alpha;
+			global::XamAR.UI.Forms.Android.Sceneform.Resource.Id.sceneform_ar_scene_view = global::Test.Droid.Resource.Id.sceneform_ar_scene_view;
+			global::XamAR.UI.Forms.Android.Sceneform.Resource.Id.sceneform_hand_image = global::Test.Droid.Resource.Id.sceneform_hand_image;
+			global::XamAR.UI.Forms.Android.Sceneform.Resource.Id.sceneform_hand_layout = global::Test.Droid.Resource.Id.sceneform_hand_layout;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Id.screen = global::Test.Droid.Resource.Id.screen;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Id.scroll = global::Test.Droid.Resource.Id.scroll;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Id.scrollable = global::Test.Droid.Resource.Id.scrollable;
@@ -4427,6 +4461,8 @@ namespace Test.Droid
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Layout.notification_template_part_chronometer = global::Test.Droid.Resource.Layout.notification_template_part_chronometer;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Layout.notification_template_part_time = global::Test.Droid.Resource.Layout.notification_template_part_time;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Layout.RootLayout = global::Test.Droid.Resource.Layout.RootLayout;
+			global::XamAR.UI.Forms.Android.Sceneform.Resource.Layout.sceneform_plane_discovery_layout = global::Test.Droid.Resource.Layout.sceneform_plane_discovery_layout;
+			global::XamAR.UI.Forms.Android.Sceneform.Resource.Layout.sceneform_ux_fragment_layout = global::Test.Droid.Resource.Layout.sceneform_ux_fragment_layout;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Layout.select_dialog_item_material = global::Test.Droid.Resource.Layout.select_dialog_item_material;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Layout.select_dialog_multichoice_material = global::Test.Droid.Resource.Layout.select_dialog_multichoice_material;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Layout.select_dialog_singlechoice_material = global::Test.Droid.Resource.Layout.select_dialog_singlechoice_material;
@@ -4436,6 +4472,9 @@ namespace Test.Droid
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Raw.keep_arcore = global::Test.Droid.Resource.Raw.keep_arcore;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Raw.sceneform_camera_material = global::Test.Droid.Resource.Raw.sceneform_camera_material;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Raw.sceneform_default_light_probe = global::Test.Droid.Resource.Raw.sceneform_default_light_probe;
+			global::XamAR.UI.Forms.Android.Sceneform.Resource.Raw.sceneform_face_mesh = global::Test.Droid.Resource.Raw.sceneform_face_mesh;
+			global::XamAR.UI.Forms.Android.Sceneform.Resource.Raw.sceneform_face_mesh_occluder = global::Test.Droid.Resource.Raw.sceneform_face_mesh_occluder;
+			global::XamAR.UI.Forms.Android.Sceneform.Resource.Raw.sceneform_footprint = global::Test.Droid.Resource.Raw.sceneform_footprint;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Raw.sceneform_opaque_colored_material = global::Test.Droid.Resource.Raw.sceneform_opaque_colored_material;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Raw.sceneform_opaque_textured_material = global::Test.Droid.Resource.Raw.sceneform_opaque_textured_material;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.Raw.sceneform_plane_material = global::Test.Droid.Resource.Raw.sceneform_plane_material;
@@ -4479,6 +4518,7 @@ namespace Test.Droid
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.String.fab_transformation_sheet_behavior = global::Test.Droid.Resource.String.fab_transformation_sheet_behavior;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.String.hello = global::Test.Droid.Resource.String.hello;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.String.hide_bottom_view_on_scroll_behavior = global::Test.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::XamAR.UI.Forms.Android.Sceneform.Resource.String.lib_name = global::Test.Droid.Resource.String.lib_name;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.String.mtrl_chip_close_icon_content_description = global::Test.Droid.Resource.String.mtrl_chip_close_icon_content_description;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.String.overflow_tab_title = global::Test.Droid.Resource.String.overflow_tab_title;
 			global::XamAR.UI.Forms.Android.Sceneform.Resource.String.password_toggle_content_description = global::Test.Droid.Resource.String.password_toggle_content_description;
@@ -14461,13 +14501,16 @@ namespace Test.Droid
 			public const int notify_panel_notification_icon_bg = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int sceneform_plane = 2131165310;
+			public const int sceneform_hand_phone = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int tooltip_frame_dark = 2131165311;
+			public const int sceneform_plane = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int tooltip_frame_light = 2131165312;
+			public const int tooltip_frame_dark = 2131165312;
+			
+			// aapt resource value: 0x7F070081
+			public const int tooltip_frame_light = 2131165313;
 			
 			static Drawable()
 			{
@@ -14987,250 +15030,259 @@ namespace Test.Droid
 			public const int save_overlay_view = 2131230892;
 			
 			// aapt resource value: 0x7F0800AD
-			public const int screen = 2131230893;
+			public const int sceneform_ar_scene_view = 2131230893;
 			
 			// aapt resource value: 0x7F0800AE
-			public const int scroll = 2131230894;
-			
-			// aapt resource value: 0x7F0800B2
-			public const int scrollable = 2131230898;
+			public const int sceneform_hand_image = 2131230894;
 			
 			// aapt resource value: 0x7F0800AF
-			public const int scrollIndicatorDown = 2131230895;
+			public const int sceneform_hand_layout = 2131230895;
 			
 			// aapt resource value: 0x7F0800B0
-			public const int scrollIndicatorUp = 2131230896;
+			public const int screen = 2131230896;
 			
 			// aapt resource value: 0x7F0800B1
-			public const int scrollView = 2131230897;
-			
-			// aapt resource value: 0x7F0800B3
-			public const int search_badge = 2131230899;
-			
-			// aapt resource value: 0x7F0800B4
-			public const int search_bar = 2131230900;
+			public const int scroll = 2131230897;
 			
 			// aapt resource value: 0x7F0800B5
-			public const int search_button = 2131230901;
+			public const int scrollable = 2131230901;
+			
+			// aapt resource value: 0x7F0800B2
+			public const int scrollIndicatorDown = 2131230898;
+			
+			// aapt resource value: 0x7F0800B3
+			public const int scrollIndicatorUp = 2131230899;
+			
+			// aapt resource value: 0x7F0800B4
+			public const int scrollView = 2131230900;
 			
 			// aapt resource value: 0x7F0800B6
-			public const int search_close_btn = 2131230902;
+			public const int search_badge = 2131230902;
 			
 			// aapt resource value: 0x7F0800B7
-			public const int search_edit_frame = 2131230903;
+			public const int search_bar = 2131230903;
 			
 			// aapt resource value: 0x7F0800B8
-			public const int search_go_btn = 2131230904;
+			public const int search_button = 2131230904;
 			
 			// aapt resource value: 0x7F0800B9
-			public const int search_mag_icon = 2131230905;
+			public const int search_close_btn = 2131230905;
 			
 			// aapt resource value: 0x7F0800BA
-			public const int search_plate = 2131230906;
+			public const int search_edit_frame = 2131230906;
 			
 			// aapt resource value: 0x7F0800BB
-			public const int search_src_text = 2131230907;
+			public const int search_go_btn = 2131230907;
 			
 			// aapt resource value: 0x7F0800BC
-			public const int search_voice_btn = 2131230908;
-			
-			// aapt resource value: 0x7F0800BE
-			public const int selected = 2131230910;
+			public const int search_mag_icon = 2131230908;
 			
 			// aapt resource value: 0x7F0800BD
-			public const int select_dialog_listview = 2131230909;
+			public const int search_plate = 2131230909;
+			
+			// aapt resource value: 0x7F0800BE
+			public const int search_src_text = 2131230910;
 			
 			// aapt resource value: 0x7F0800BF
-			public const int shellcontent_appbar = 2131230911;
+			public const int search_voice_btn = 2131230911;
+			
+			// aapt resource value: 0x7F0800C1
+			public const int selected = 2131230913;
 			
 			// aapt resource value: 0x7F0800C0
-			public const int shellcontent_toolbar = 2131230912;
+			public const int select_dialog_listview = 2131230912;
+			
+			// aapt resource value: 0x7F0800C2
+			public const int shellcontent_appbar = 2131230914;
+			
+			// aapt resource value: 0x7F0800C3
+			public const int shellcontent_toolbar = 2131230915;
 			
 			// aapt resource value: 0x7F080004
 			public const int SHIFT = 2131230724;
 			
-			// aapt resource value: 0x7F0800C1
-			public const int shortcut = 2131230913;
-			
-			// aapt resource value: 0x7F0800C2
-			public const int showCustom = 2131230914;
-			
-			// aapt resource value: 0x7F0800C3
-			public const int showHome = 2131230915;
-			
 			// aapt resource value: 0x7F0800C4
-			public const int showTitle = 2131230916;
+			public const int shortcut = 2131230916;
 			
 			// aapt resource value: 0x7F0800C5
-			public const int sliding_tabs = 2131230917;
+			public const int showCustom = 2131230917;
 			
 			// aapt resource value: 0x7F0800C6
-			public const int smallLabel = 2131230918;
+			public const int showHome = 2131230918;
 			
 			// aapt resource value: 0x7F0800C7
-			public const int snackbar_action = 2131230919;
+			public const int showTitle = 2131230919;
 			
 			// aapt resource value: 0x7F0800C8
-			public const int snackbar_text = 2131230920;
+			public const int sliding_tabs = 2131230920;
 			
 			// aapt resource value: 0x7F0800C9
-			public const int snap = 2131230921;
+			public const int smallLabel = 2131230921;
 			
 			// aapt resource value: 0x7F0800CA
-			public const int snapMargins = 2131230922;
+			public const int snackbar_action = 2131230922;
 			
 			// aapt resource value: 0x7F0800CB
-			public const int spacer = 2131230923;
+			public const int snackbar_text = 2131230923;
 			
 			// aapt resource value: 0x7F0800CC
-			public const int split_action_bar = 2131230924;
+			public const int snap = 2131230924;
 			
 			// aapt resource value: 0x7F0800CD
-			public const int src_atop = 2131230925;
+			public const int snapMargins = 2131230925;
 			
 			// aapt resource value: 0x7F0800CE
-			public const int src_in = 2131230926;
+			public const int spacer = 2131230926;
 			
 			// aapt resource value: 0x7F0800CF
-			public const int src_over = 2131230927;
+			public const int split_action_bar = 2131230927;
 			
 			// aapt resource value: 0x7F0800D0
-			public const int start = 2131230928;
+			public const int src_atop = 2131230928;
 			
 			// aapt resource value: 0x7F0800D1
-			public const int status_bar_latest_event_content = 2131230929;
+			public const int src_in = 2131230929;
 			
 			// aapt resource value: 0x7F0800D2
-			public const int stretch = 2131230930;
+			public const int src_over = 2131230930;
 			
 			// aapt resource value: 0x7F0800D3
-			public const int submenuarrow = 2131230931;
+			public const int start = 2131230931;
 			
 			// aapt resource value: 0x7F0800D4
-			public const int submit_area = 2131230932;
+			public const int status_bar_latest_event_content = 2131230932;
+			
+			// aapt resource value: 0x7F0800D5
+			public const int stretch = 2131230933;
+			
+			// aapt resource value: 0x7F0800D6
+			public const int submenuarrow = 2131230934;
+			
+			// aapt resource value: 0x7F0800D7
+			public const int submit_area = 2131230935;
 			
 			// aapt resource value: 0x7F080005
 			public const int SYM = 2131230725;
 			
-			// aapt resource value: 0x7F0800D5
-			public const int tabMode = 2131230933;
-			
-			// aapt resource value: 0x7F0800D6
-			public const int tag_accessibility_actions = 2131230934;
-			
-			// aapt resource value: 0x7F0800D7
-			public const int tag_accessibility_clickable_spans = 2131230935;
-			
 			// aapt resource value: 0x7F0800D8
-			public const int tag_accessibility_heading = 2131230936;
+			public const int tabMode = 2131230936;
 			
 			// aapt resource value: 0x7F0800D9
-			public const int tag_accessibility_pane_title = 2131230937;
+			public const int tag_accessibility_actions = 2131230937;
 			
 			// aapt resource value: 0x7F0800DA
-			public const int tag_screen_reader_focusable = 2131230938;
+			public const int tag_accessibility_clickable_spans = 2131230938;
 			
 			// aapt resource value: 0x7F0800DB
-			public const int tag_transition_group = 2131230939;
+			public const int tag_accessibility_heading = 2131230939;
 			
 			// aapt resource value: 0x7F0800DC
-			public const int tag_unhandled_key_event_manager = 2131230940;
+			public const int tag_accessibility_pane_title = 2131230940;
 			
 			// aapt resource value: 0x7F0800DD
-			public const int tag_unhandled_key_listeners = 2131230941;
+			public const int tag_screen_reader_focusable = 2131230941;
 			
 			// aapt resource value: 0x7F0800DE
-			public const int text = 2131230942;
+			public const int tag_transition_group = 2131230942;
 			
 			// aapt resource value: 0x7F0800DF
-			public const int text2 = 2131230943;
-			
-			// aapt resource value: 0x7F0800E4
-			public const int textinput_counter = 2131230948;
-			
-			// aapt resource value: 0x7F0800E5
-			public const int textinput_error = 2131230949;
-			
-			// aapt resource value: 0x7F0800E6
-			public const int textinput_helper_text = 2131230950;
+			public const int tag_unhandled_key_event_manager = 2131230943;
 			
 			// aapt resource value: 0x7F0800E0
-			public const int textSpacerNoButtons = 2131230944;
+			public const int tag_unhandled_key_listeners = 2131230944;
 			
 			// aapt resource value: 0x7F0800E1
-			public const int textSpacerNoTitle = 2131230945;
+			public const int text = 2131230945;
 			
 			// aapt resource value: 0x7F0800E2
-			public const int textStart = 2131230946;
-			
-			// aapt resource value: 0x7F0800E3
-			public const int text_input_password_toggle = 2131230947;
+			public const int text2 = 2131230946;
 			
 			// aapt resource value: 0x7F0800E7
-			public const int time = 2131230951;
+			public const int textinput_counter = 2131230951;
 			
 			// aapt resource value: 0x7F0800E8
-			public const int title = 2131230952;
+			public const int textinput_error = 2131230952;
 			
 			// aapt resource value: 0x7F0800E9
-			public const int titleDividerNoCustom = 2131230953;
+			public const int textinput_helper_text = 2131230953;
+			
+			// aapt resource value: 0x7F0800E3
+			public const int textSpacerNoButtons = 2131230947;
+			
+			// aapt resource value: 0x7F0800E4
+			public const int textSpacerNoTitle = 2131230948;
+			
+			// aapt resource value: 0x7F0800E5
+			public const int textStart = 2131230949;
+			
+			// aapt resource value: 0x7F0800E6
+			public const int text_input_password_toggle = 2131230950;
 			
 			// aapt resource value: 0x7F0800EA
-			public const int title_template = 2131230954;
+			public const int time = 2131230954;
 			
 			// aapt resource value: 0x7F0800EB
-			public const int toolbar = 2131230955;
+			public const int title = 2131230955;
 			
 			// aapt resource value: 0x7F0800EC
-			public const int top = 2131230956;
+			public const int titleDividerNoCustom = 2131230956;
 			
 			// aapt resource value: 0x7F0800ED
-			public const int topPanel = 2131230957;
+			public const int title_template = 2131230957;
 			
 			// aapt resource value: 0x7F0800EE
-			public const int touch_outside = 2131230958;
+			public const int toolbar = 2131230958;
 			
 			// aapt resource value: 0x7F0800EF
-			public const int transition_current_scene = 2131230959;
+			public const int top = 2131230959;
 			
 			// aapt resource value: 0x7F0800F0
-			public const int transition_layout_save = 2131230960;
+			public const int topPanel = 2131230960;
 			
 			// aapt resource value: 0x7F0800F1
-			public const int transition_position = 2131230961;
+			public const int touch_outside = 2131230961;
 			
 			// aapt resource value: 0x7F0800F2
-			public const int transition_scene_layoutid_cache = 2131230962;
+			public const int transition_current_scene = 2131230962;
 			
 			// aapt resource value: 0x7F0800F3
-			public const int transition_transform = 2131230963;
+			public const int transition_layout_save = 2131230963;
 			
 			// aapt resource value: 0x7F0800F4
-			public const int @unchecked = 2131230964;
+			public const int transition_position = 2131230964;
 			
 			// aapt resource value: 0x7F0800F5
-			public const int uniform = 2131230965;
+			public const int transition_scene_layoutid_cache = 2131230965;
 			
 			// aapt resource value: 0x7F0800F6
-			public const int unlabeled = 2131230966;
+			public const int transition_transform = 2131230966;
 			
 			// aapt resource value: 0x7F0800F7
-			public const int up = 2131230967;
+			public const int @unchecked = 2131230967;
 			
 			// aapt resource value: 0x7F0800F8
-			public const int useLogo = 2131230968;
+			public const int uniform = 2131230968;
 			
 			// aapt resource value: 0x7F0800F9
-			public const int view_offset_helper = 2131230969;
+			public const int unlabeled = 2131230969;
 			
 			// aapt resource value: 0x7F0800FA
-			public const int visible = 2131230970;
+			public const int up = 2131230970;
 			
 			// aapt resource value: 0x7F0800FB
-			public const int withText = 2131230971;
+			public const int useLogo = 2131230971;
 			
 			// aapt resource value: 0x7F0800FC
-			public const int wrap_content = 2131230972;
+			public const int view_offset_helper = 2131230972;
+			
+			// aapt resource value: 0x7F0800FD
+			public const int visible = 2131230973;
+			
+			// aapt resource value: 0x7F0800FE
+			public const int withText = 2131230974;
+			
+			// aapt resource value: 0x7F0800FF
+			public const int wrap_content = 2131230975;
 			
 			// aapt resource value: 0x7F080006
 			public const int @__arcore_cancelButton = 2131230726;
@@ -15560,25 +15612,31 @@ namespace Test.Droid
 			public const int RootLayout = 2131427395;
 			
 			// aapt resource value: 0x7F0B0044
-			public const int select_dialog_item_material = 2131427396;
+			public const int sceneform_plane_discovery_layout = 2131427396;
 			
 			// aapt resource value: 0x7F0B0045
-			public const int select_dialog_multichoice_material = 2131427397;
+			public const int sceneform_ux_fragment_layout = 2131427397;
 			
 			// aapt resource value: 0x7F0B0046
-			public const int select_dialog_singlechoice_material = 2131427398;
+			public const int select_dialog_item_material = 2131427398;
 			
 			// aapt resource value: 0x7F0B0047
-			public const int ShellContent = 2131427399;
+			public const int select_dialog_multichoice_material = 2131427399;
 			
 			// aapt resource value: 0x7F0B0048
-			public const int support_simple_spinner_dropdown_item = 2131427400;
+			public const int select_dialog_singlechoice_material = 2131427400;
 			
 			// aapt resource value: 0x7F0B0049
-			public const int Tabbar = 2131427401;
+			public const int ShellContent = 2131427401;
 			
 			// aapt resource value: 0x7F0B004A
-			public const int Toolbar = 2131427402;
+			public const int support_simple_spinner_dropdown_item = 2131427402;
+			
+			// aapt resource value: 0x7F0B004B
+			public const int Tabbar = 2131427403;
+			
+			// aapt resource value: 0x7F0B004C
+			public const int Toolbar = 2131427404;
 			
 			// aapt resource value: 0x7F0B0000
 			public const int @__arcore_education = 2131427328;
@@ -15628,25 +15686,34 @@ namespace Test.Droid
 			public const int sceneform_default_light_probe = 2131558402;
 			
 			// aapt resource value: 0x7F0D0003
-			public const int sceneform_opaque_colored_material = 2131558403;
+			public const int sceneform_face_mesh = 2131558403;
 			
 			// aapt resource value: 0x7F0D0004
-			public const int sceneform_opaque_textured_material = 2131558404;
+			public const int sceneform_face_mesh_occluder = 2131558404;
 			
 			// aapt resource value: 0x7F0D0005
-			public const int sceneform_plane_material = 2131558405;
+			public const int sceneform_footprint = 2131558405;
 			
 			// aapt resource value: 0x7F0D0006
-			public const int sceneform_plane_shadow_material = 2131558406;
+			public const int sceneform_opaque_colored_material = 2131558406;
 			
 			// aapt resource value: 0x7F0D0007
-			public const int sceneform_transparent_colored_material = 2131558407;
+			public const int sceneform_opaque_textured_material = 2131558407;
 			
 			// aapt resource value: 0x7F0D0008
-			public const int sceneform_transparent_textured_material = 2131558408;
+			public const int sceneform_plane_material = 2131558408;
 			
 			// aapt resource value: 0x7F0D0009
-			public const int sceneform_view_renderable = 2131558409;
+			public const int sceneform_plane_shadow_material = 2131558409;
+			
+			// aapt resource value: 0x7F0D000A
+			public const int sceneform_transparent_colored_material = 2131558410;
+			
+			// aapt resource value: 0x7F0D000B
+			public const int sceneform_transparent_textured_material = 2131558411;
+			
+			// aapt resource value: 0x7F0D000C
+			public const int sceneform_view_renderable = 2131558412;
 			
 			static Raw()
 			{
@@ -15782,31 +15849,34 @@ namespace Test.Droid
 			public const int hide_bottom_view_on_scroll_behavior = 2131623980;
 			
 			// aapt resource value: 0x7F0E002D
-			public const int mtrl_chip_close_icon_content_description = 2131623981;
+			public const int lib_name = 2131623981;
 			
 			// aapt resource value: 0x7F0E002E
-			public const int overflow_tab_title = 2131623982;
+			public const int mtrl_chip_close_icon_content_description = 2131623982;
 			
 			// aapt resource value: 0x7F0E002F
-			public const int password_toggle_content_description = 2131623983;
+			public const int overflow_tab_title = 2131623983;
 			
 			// aapt resource value: 0x7F0E0030
-			public const int path_password_eye = 2131623984;
+			public const int password_toggle_content_description = 2131623984;
 			
 			// aapt resource value: 0x7F0E0031
-			public const int path_password_eye_mask_strike_through = 2131623985;
+			public const int path_password_eye = 2131623985;
 			
 			// aapt resource value: 0x7F0E0032
-			public const int path_password_eye_mask_visible = 2131623986;
+			public const int path_password_eye_mask_strike_through = 2131623986;
 			
 			// aapt resource value: 0x7F0E0033
-			public const int path_password_strike_through = 2131623987;
+			public const int path_password_eye_mask_visible = 2131623987;
 			
 			// aapt resource value: 0x7F0E0034
-			public const int search_menu_title = 2131623988;
+			public const int path_password_strike_through = 2131623988;
 			
 			// aapt resource value: 0x7F0E0035
-			public const int status_bar_notification_info_overflow = 2131623989;
+			public const int search_menu_title = 2131623989;
+			
+			// aapt resource value: 0x7F0E0036
+			public const int status_bar_notification_info_overflow = 2131623990;
 			
 			// aapt resource value: 0x7F0E0000
 			public const int @__arcore_cancel = 2131623936;

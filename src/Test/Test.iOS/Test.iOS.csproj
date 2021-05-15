@@ -126,16 +126,16 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="XamAR.Forms">
-      <Version>0.1.4-alpha</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="XamAR.Forms">
+      <Version>0.1.5-alpha</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Test\Test.csproj">
-      <Project>{C3F1AD3E-141D-4FC4-8092-D575FF6E1A63}</Project>
+      <Project>{EA9770C9-E7E6-43A1-A08F-E29F9A43D0B1}</Project>
       <Name>Test</Name>
     </ProjectReference>
   </ItemGroup>

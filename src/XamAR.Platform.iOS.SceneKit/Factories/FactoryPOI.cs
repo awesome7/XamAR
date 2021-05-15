@@ -14,7 +14,7 @@ namespace XamAR.Platform.iOS.SceneKit.Factories
         {
             List<Drawable> list = new List<Drawable>();
 
-            SCNNode sphere = ScnGeometryHelpers.CreateSphere(
+            SCNNode sphere = SCNGeometryHelpers.CreateSphere(
                 new SphereConfig
                 {
                     Center = new SCNVector3(0, 0, 0),
@@ -24,7 +24,7 @@ namespace XamAR.Platform.iOS.SceneKit.Factories
 
             list.Add(new DrawableScnNode(sphere));
 
-            SCNNode label = ScnGeometryHelpers.CreateLabel(
+            SCNNode label = SCNGeometryHelpers.CreateLabel(
                 new LabelConfig
                 {
                     BackgroundColor = UIColor.Red,
