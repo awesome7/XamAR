@@ -52,10 +52,6 @@
     <ProjectReference Include="..\XamAR.UI.Android.Sceneform\XamAR.UI.Android.Sceneform.csproj" PrivateAssets="All" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="nuget.config" />
-  </ItemGroup>
-
   <PropertyGroup>
     <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
