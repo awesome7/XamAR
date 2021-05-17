@@ -13,7 +13,12 @@ variables:
   buildConfiguration: 'Release'
 
 trigger:
-- main
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - src
 
 pool:
   vmImage: 'macos-latest'
