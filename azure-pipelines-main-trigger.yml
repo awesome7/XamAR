@@ -42,13 +42,13 @@ steps:
     command: 'build'
     arguments: '--configuration $(BuildConfiguration)'
     projects: |
-      **/Xamar.Forms.csproj
-      **/Xamar.Native.csproj
+      **/XamAR.Forms.csproj
+      **/XamAR.Native.csproj
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'pack'
-    packagesToPack: '**/Xamar.Forms.csproj;**/Xamar.Native.csproj'
+    packagesToPack: '**/XamAR.Forms.csproj;**/XamAR.Native.csproj'
     nobuild: true
     includesymbols: true
     includesource: true
