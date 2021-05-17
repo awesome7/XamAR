@@ -28,12 +28,14 @@ steps:
 #  enabled: false
 
 - task: NuGetToolInstaller@1
+  displayName: 'Install NuGet'
 
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
     restoreSolution: '**/*.sln'
     includeNuGetOrg: true
+  displayName: 'Restore NuGet packages for solution'
 
 - task: MSBuild@1
   inputs:
@@ -41,6 +43,7 @@ steps:
     platform: 'AnyCPU'
     configuration: '$(BuildConfiguration)'
     msbuildArguments: '/t:pack /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)'
+  displayName: 'Build and pack XamAR.Forms'
 
 - task: MSBuild@1
   inputs:
@@ -48,6 +51,14 @@ steps:
     platform: 'AnyCPU'
     configuration: '$(BuildConfiguration)'
     msbuildArguments: '/t:pack /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)'
+  displayName: 'Build and pack XamAR.Native'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'   
+  displayName: 'Publish Pack Artifacts'
 
 #- task: DotNetCoreCLI@2
 #  inputs:
