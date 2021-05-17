@@ -3,6 +3,7 @@ using XamAR.Core;
 using XamAR.Core.Display;
 using XamAR.Core.Factories;
 using XamAR.Diagnostics;
+using XamAR.Platform.Core;
 using XamAR.Platform.iOS.SceneKit;
 using XamAR.UI.iOS.SceneKit;
 
@@ -18,6 +19,7 @@ namespace XamAR
         {
             DI.Container
                 .AddCore()
+                .AddPlatformCore()
                 .AddPlatformIOSSceneKit()
                 .AddUIiOSSceneKit()
                 .AddDiagnostics();

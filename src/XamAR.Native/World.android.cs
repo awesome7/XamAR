@@ -4,6 +4,7 @@ using XamAR.Core.Display;
 using XamAR.Core.Factories;
 using XamAR.Diagnostics;
 using XamAR.Platform.Android.Sceneform;
+using XamAR.Platform.Core;
 using XamAR.UI.Android.Sceneform;
 
 // ReSharper disable once CheckNamespace
@@ -18,6 +19,7 @@ namespace XamAR
         {
             DI.Container
                 .AddCore()
+                .AddPlatformCore()
                 .AddPlatformAndroidSceneform()
                 .AddUIAndroidSceneform()
                 .AddDiagnostics();

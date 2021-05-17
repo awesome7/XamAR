@@ -12,7 +12,7 @@
     <Company>awesome7</Company>
     <Owners>awesome7</Owners>
     <Copyright>© Awesome7 Technologies</Copyright>
-    <Summary>XamAR.Forms: cross-platform AR SDK for Xamarin.Forms</Summary>
+    <Summary>Cross-platform Augmented Reality (AR) SDK for Xamarin.Forms</Summary>
     <PackageTags>ar xamarin ios android toolkit sdk xamarin.forms</PackageTags>
     <Title>XamAR.Forms</Title>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -32,25 +32,27 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Platforms\**\*.cs" />
-    <None Include="Platforms\**\*.cs" />
+    <Compile Remove="**\*.android.cs" />
+    <Compile Remove="**\*.ios.cs" />
+    <None Include="**\*.android.cs" />
+    <None Include="**\*.ios.cs" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
-    <Compile Include="Platforms\iOS\**\*.cs" />
+    <Compile Include="**\*.ios.cs" />
     <ProjectReference Include="..\XamAR.Platform.iOS.SceneKit\XamAR.Platform.iOS.SceneKit.csproj" PrivateAssets="All" />
-    <ProjectReference Include="..\XamAR.UI.iOS.SceneKit\XamAR.UI.iOS.SceneKit.csproj" PrivateAssets="All"/>
-    <ProjectReference Include="..\XamAR.UI.Forms.iOS.SceneKit\XamAR.UI.Forms.iOS.SceneKit.csproj" PrivateAssets="All"/>
+    <ProjectReference Include="..\XamAR.UI.iOS.SceneKit\XamAR.UI.iOS.SceneKit.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\XamAR.UI.Forms.iOS.SceneKit\XamAR.UI.Forms.iOS.SceneKit.csproj" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
-    <Compile Include="Platforms\Android\**\*.cs" />
+    <Compile Include="**\*.android.cs" />
     <PackageReference Include="Xamarin.Android.SceneForm.UX" Version="1.17.1" />
     <PackageReference Include="Xamarin.Android.SceneForm.Core" Version="1.17.1" />
     <PackageReference Include="Xamarin.Android.SceneForm.Rendering" Version="1.17.1" />
-    <ProjectReference Include="..\XamAR.Platform.Android.Sceneform\XamAR.Platform.Android.Sceneform.csproj" PrivateAssets="All"/>
-    <ProjectReference Include="..\XamAR.UI.Android.Sceneform\XamAR.UI.Android.Sceneform.csproj" PrivateAssets="All"/>
-    <ProjectReference Include="..\XamAR.UI.Forms.Android.Sceneform\XamAR.UI.Forms.Android.Sceneform.csproj" PrivateAssets="All"/>
+    <ProjectReference Include="..\XamAR.Platform.Android.Sceneform\XamAR.Platform.Android.Sceneform.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\XamAR.UI.Android.Sceneform\XamAR.UI.Android.Sceneform.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\XamAR.UI.Forms.Android.Sceneform\XamAR.UI.Forms.Android.Sceneform.csproj" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
@@ -64,7 +66,7 @@
   <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
     <ItemGroup>
       <!-- Filter out unnecessary files -->
-      <_ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')->WithMetadataValue('PrivateAssets', 'All'))"/>
+      <_ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'All'))" />
     </ItemGroup>
 
     <!-- Print batches for debug purposes -->
@@ -72,7 +74,7 @@
 
     <ItemGroup>
       <!-- Add file to package with consideration of sub folder. If empty, the root folder is chosen. -->
-      <BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)"/>
+      <BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)" />
     </ItemGroup>
   </Target>
 

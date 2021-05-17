@@ -2,30 +2,77 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;Xamarin.iOS10;MonoAndroid9.0;MonoAndroid10.0;MonoAndroid11.0;</TargetFrameworks>
+    <Version Condition=" '$(BUILD_BUILDNUMBER)' == '' ">0.1.5</Version>
+    <Version Condition=" '$(BUILD_BUILDNUMBER)' != '' ">$(BUILD_BUILDNUMBER)</Version>
+    <PackageVersion Condition=" '$(BUILD_BUILDNUMBER)' == '' ">0.1.5-alpha</PackageVersion>
+    <PackageVersion Condition=" '$(BUILD_BUILDNUMBER)' != '' ">$(BUILD_BUILDNUMBER)</PackageVersion>
     <LangVersion>8.0</LangVersion>
+    <PackageId>XamAR.Native</PackageId>
+    <Authors>awesome7</Authors>
+    <Company>awesome7</Company>
+    <Owners>awesome7</Owners>
+    <Copyright>© Awesome7 Technologies</Copyright>
+    <Summary>Augmented Reality (AR) SDK for Xamarin.iOS and Xamarin.Android</Summary>
+    <PackageTags>ar xamarin ios android toolkit sdk</PackageTags>
+    <Title>XamAR.Native</Title>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>Augmented Reality (AR) SDK for Xamarin.iOS and Xamarin.Android</Description>
+    <PackageProjectUrl>https://github.com/awesome7/xamAR</PackageProjectUrl>
+    <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XamAR.Core\XamAR.Core.csproj" />
-    <ProjectReference Include="..\XamAR.Diagnostics\XamAR.Diagnostics.csproj" />
-    <ProjectReference Include="..\XamAR\XamAR.csproj" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="DryIoc.dll" Version="4.7.7" />
+    <ProjectReference Include="..\XamAR.Core\XamAR.Core.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\XamAR.Platform.Core\XamAR.Platform.Core.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\XamAR.Diagnostics\XamAR.Diagnostics.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\XamAR\XamAR.csproj" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Platforms\**\*.cs" />
-    <None Include="Platforms\**\*.cs" />
+    <Compile Remove="**\*.android.cs" />
+    <Compile Remove="**\*.ios.cs" />
+    <None Include="**\*.android.cs" />
+    <None Include="**\*.ios.cs" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
-    <Compile Include="Platforms\iOS\**\*.cs" />
-    <ProjectReference Include="..\XamAR.Platform.iOS.SceneKit\XamAR.Platform.iOS.SceneKit.csproj" />
-    <ProjectReference Include="..\XamAR.UI.iOS.SceneKit\XamAR.UI.iOS.SceneKit.csproj" />
+    <Compile Include="**\*.ios.cs" />
+    <ProjectReference Include="..\XamAR.Platform.iOS.SceneKit\XamAR.Platform.iOS.SceneKit.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\XamAR.UI.iOS.SceneKit\XamAR.UI.iOS.SceneKit.csproj" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
-    <Compile Include="Platforms\Android\**\*.cs" />
-    <ProjectReference Include="..\XamAR.Platform.Android.Sceneform\XamAR.Platform.Android.Sceneform.csproj" />
-    <ProjectReference Include="..\XamAR.UI.Android.Sceneform\XamAR.UI.Android.Sceneform.csproj" />
+    <Compile Include="**\*.android.cs" />
+    <PackageReference Include="Xamarin.Android.SceneForm.UX" Version="1.17.1" />
+    <PackageReference Include="Xamarin.Android.SceneForm.Core" Version="1.17.1" />
+    <PackageReference Include="Xamarin.Android.SceneForm.Rendering" Version="1.17.1" />
+    <ProjectReference Include="..\XamAR.Platform.Android.Sceneform\XamAR.Platform.Android.Sceneform.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\XamAR.UI.Android.Sceneform\XamAR.UI.Android.Sceneform.csproj" PrivateAssets="All" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="nuget.config" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+  </PropertyGroup>
+
+  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
+    <ItemGroup>
+      <!-- Filter out unnecessary files -->
+      <_ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'All'))" />
+    </ItemGroup>
+
+    <!-- Print batches for debug purposes -->
+    <Message Text="Batch for .nupkg: ReferenceCopyLocalPaths = @(_ReferenceCopyLocalPaths), ReferenceCopyLocalPaths.DestinationSubDirectory = %(_ReferenceCopyLocalPaths.DestinationSubDirectory) Filename = %(_ReferenceCopyLocalPaths.Filename) Extension = %(_ReferenceCopyLocalPaths.Extension)" Importance="High" Condition="'@(_ReferenceCopyLocalPaths)' != ''" />
+
+    <ItemGroup>
+      <!-- Add file to package with consideration of sub folder. If empty, the root folder is chosen. -->
+      <BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)" />
+    </ItemGroup>
+  </Target>
 
 </Project>
