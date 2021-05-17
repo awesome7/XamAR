@@ -42,7 +42,7 @@ steps:
     solution: '**/XamAR.Forms.csproj'
     platform: 'AnyCPU'
     configuration: '$(BuildConfiguration)'
-    msbuildArguments: '/t:pack /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)'
+    msbuildArguments: '/t:pack /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)'
   displayName: 'Build and pack XamAR.Forms'
 
 - task: MSBuild@1
@@ -50,7 +50,7 @@ steps:
     solution: '**/XamAR.Native.csproj'
     platform: 'AnyCPU'
     configuration: '$(BuildConfiguration)'
-    msbuildArguments: '/t:pack /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)'
+    msbuildArguments: '/t:pack /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)'
   displayName: 'Build and pack XamAR.Native'
 
 - task: PublishBuildArtifacts@1
