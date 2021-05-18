@@ -21,8 +21,8 @@ namespace XamAR
                 .AddCore()
                 .AddPlatformCore()
                 .AddPlatformIOSSceneKit()
-                .AddUIiOSSceneKit()
-                .AddDiagnostics();
+                .AddUIiOSSceneKit();
+                //.AddDiagnostics();
 
             DI.Container.Register<World, WorldNative>();
             DI.Container.Resolve<EntityUpdateService>().Run();

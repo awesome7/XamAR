@@ -5,6 +5,7 @@ using XamAR.Core.Factories;
 using XamAR.Diagnostics;
 using XamAR.Platform.Core;
 using XamAR.Platform.iOS.SceneKit;
+using XamAR.UI.Forms.iOS.SceneKit;
 using XamAR.UI.iOS.SceneKit;
 
 // ReSharper disable once CheckNamespace
@@ -22,7 +23,8 @@ namespace XamAR
                 .AddPlatformCore()
                 .AddPlatformIOSSceneKit()
                 .AddUIiOSSceneKit()
-                .AddDiagnostics();
+                .AddUIFormsiOSSceneKit();
+                //.AddDiagnostics();
 
             DI.Container.Register<World, WorldForms>();
             DI.Container.Resolve<EntityUpdateService>().Run();

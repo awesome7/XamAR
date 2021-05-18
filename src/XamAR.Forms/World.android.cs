@@ -8,6 +8,7 @@ using XamAR.Diagnostics;
 using XamAR.Platform.Android.Sceneform;
 using XamAR.Platform.Core;
 using XamAR.UI.Android.Sceneform;
+using XamAR.UI.Forms.Android.Sceneform;
 
 // ReSharper disable once CheckNamespace
 namespace XamAR
@@ -24,7 +25,9 @@ namespace XamAR
                 .AddPlatformCore()
                 .AddPlatformAndroidSceneform()
                 .AddUIAndroidSceneform()
-                .AddDiagnostics();
+                .AddUIFormsAndroidSceneform();
+                // If used, Diagnostics should replace EntityUpdateService.
+                //.AddDiagnostics();
 
             Xamarin.Essentials.Platform.Init(activity, bundle);
 

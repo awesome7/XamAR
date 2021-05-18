@@ -21,8 +21,8 @@ namespace XamAR
                 .AddCore()
                 .AddPlatformCore()
                 .AddPlatformAndroidSceneform()
-                .AddUIAndroidSceneform()
-                .AddDiagnostics();
+                .AddUIAndroidSceneform();
+                //.AddDiagnostics();
 
             DI.Container.Register<World, WorldNative>();
             DI.Container.Resolve<EntityUpdateService>().Run();
