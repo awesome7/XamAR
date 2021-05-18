@@ -12,6 +12,6 @@
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
-    <PackageReference Include="XamAR.Forms" Version="0.1.5-alpha" />
+    <PackageReference Include="XamAR.Forms" Version="0.2.14-alpha" />
   </ItemGroup>
 </Project>

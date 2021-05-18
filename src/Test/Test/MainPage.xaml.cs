@@ -44,7 +44,8 @@ namespace Test
                 text.Offset = new Vector3(0, 0.1f, 0);
                 obj = world.AddModel(
                     pos,
-                    sphere, text
+                    //sphere,
+                    text
                 );
                 obj.DistanceOverride = new FixedDistance(2);
                 obj.Pressed += ObjPressed;
@@ -56,7 +57,8 @@ namespace Test
                 text.Offset = new Vector3(0, 0.1f, 0);
                 obj = world.AddModel(
                     pos,
-                    sphere, text
+                    //sphere,
+                    text
                 );
                 obj.DistanceOverride = new FixedDistance(2);
                 positionObjects.Add(obj);
@@ -67,7 +69,8 @@ namespace Test
                 text.Offset = new Vector3(0, 0.1f, 0);
                 obj = world.AddModel(
                     pos,
-                    sphere, text
+                    //sphere,
+                    text
                 );
                 obj.DistanceOverride = new FixedDistance(2);
                 positionObjects.Add(obj);
@@ -78,7 +81,8 @@ namespace Test
                 text.Offset = new Vector3(0, 0.1f, 0);
                 obj = world.AddModel(
                     pos,
-                    sphere, text
+                    //sphere,
+                    text
                 );
                 obj.DistanceOverride = new FixedDistance(2);
                 positionObjects.Add(obj);
@@ -92,7 +96,8 @@ namespace Test
                 text.Offset = new Vector3(0, 0.1f, 0);
                 obj = world.AddModel(
                     pos,
-                    sphere, text
+                    //sphere,
+                    text
                 );
                 obj.DirectionSource = dir;
                 directionObjects.Add(obj);
@@ -104,7 +109,8 @@ namespace Test
                 text.Offset = new Vector3(0, 0.1f, 0);
                 obj = world.AddModel(
                     pos,
-                    sphere, text
+                    //sphere,
+                    text
                 );
                 obj.DirectionSource = dir;
                 directionObjects.Add(obj);
@@ -116,7 +122,8 @@ namespace Test
                 text.Offset = new Vector3(0, 0.1f, 0);
                 obj = world.AddModel(
                     pos,
-                    sphere, text
+                    //sphere,
+                    text
                 );
                 obj.DirectionSource = dir;
                 AnchoredObject temp = obj;
@@ -149,7 +156,8 @@ namespace Test
                 text.Offset = new Vector3(0, 0.1f, 0);
                 obj = world.AddModel(
                     pos,
-                    sphere, text
+                    //sphere,
+                    text
                 );
                 obj.DirectionSource = dir;
                 directionObjects.Add(obj);

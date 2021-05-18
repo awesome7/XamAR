@@ -12,7 +12,7 @@ namespace Test.ViewModels
         private int _skipFrames;
         private int _frameRate;
         private int _calculationRate;
-        private readonly EntityUpdateServiceSkipFrames _service;
+        //private readonly EntityUpdateServiceSkipFrames _service;
 
         public static List<int> SkipFrameItems = Enumerable.Range(0, 10).ToList();
 
@@ -37,7 +37,7 @@ namespace Test.ViewModels
             set => OnPropertyChanged(() =>
             {
                 _skipFrames = value;
-                _service.SkipFrames = value;
+                //_service.SkipFrames = value;
             });
         }
 
