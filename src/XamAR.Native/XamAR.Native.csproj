@@ -13,6 +13,8 @@
     <Owners>awesome7</Owners>
     <Copyright>© Awesome7 Technologies</Copyright>
     <Summary>Augmented Reality (AR) SDK for Xamarin.iOS and Xamarin.Android</Summary>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl>https://raw.githubusercontent.com/awesome7/XamAR/main/icon.png</PackageIconUrl>
     <PackageTags>ar xamarin ios android toolkit sdk</PackageTags>
     <Title>XamAR.Native</Title>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -70,5 +72,9 @@
       <BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)" />
     </ItemGroup>
   </Target>
+
+  <ItemGroup>
+    <None Include="..\..\icon.png" Pack="true" PackagePath=""/>
+  </ItemGroup>
 
 </Project>
