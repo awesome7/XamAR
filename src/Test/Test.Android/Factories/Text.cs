@@ -22,8 +22,12 @@ namespace Test.Droid.Factories
 
             var text = new TextView(Application.Context) {Text = tag};
             text.SetTextColor(Android.Graphics.Color.AliceBlue);
+            text.SetBackgroundColor(Android.Graphics.Color.Argb(120, 0, 0, 0));
+            int padding = 10;
+            text.SetPadding(padding, padding, padding, padding);
             //text.SetWidth(100);
             //text.SetHeight(60);
+            
             ViewRenderable.InvokeBuilder()
                 .SetView(Application.Context, text)
                 .Build()
