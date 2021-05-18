@@ -9,6 +9,7 @@ namespace XamAR.Core
         public static IContainer AddCore(this IContainer container)
         {
             container.Register<ObjectManagerService>(Reuse.Singleton);
+            container.Register<EntityUpdateService>(Reuse.Singleton);
 
             return container;
         }

@@ -25,6 +25,7 @@ namespace XamAR
                 .AddDiagnostics();
 
             DI.Container.Register<World, WorldForms>();
+            DI.Container.Resolve<EntityUpdateService>().Run();
         }
     }
 }
