@@ -29,6 +29,7 @@ namespace XamAR
             Xamarin.Essentials.Platform.Init(activity, bundle);
 
             DI.Container.Register<World, WorldForms>();
+            DI.Container.Resolve<EntityUpdateService>().Run();
         }
     }
 }
