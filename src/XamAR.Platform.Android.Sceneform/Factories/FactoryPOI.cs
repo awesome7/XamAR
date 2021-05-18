@@ -34,12 +34,13 @@ namespace XamAR.Platform.Android.Sceneform.Factories
                     })
                 );
 
-            list.Add(new DrawableNode(nodeSphere));
+            // Removed sphere.
+            //list.Add(new DrawableNode(nodeSphere));
 
             // Create text.
             Node nodeText = new Node // fragment.TransformationSystem);
             {
-                LocalPosition = new Google.AR.Sceneform.Math.Vector3(0, 0.1f, 0.1f)
+                LocalPosition = new Google.AR.Sceneform.Math.Vector3(0, 0f, 0f)
             };
 
             TextView text = new TextView(context)
@@ -48,6 +49,7 @@ namespace XamAR.Platform.Android.Sceneform.Factories
             };
 
             text.SetTextColor(global::Android.Graphics.Color.AliceBlue);
+            text.SetBackgroundColor(new global::Android.Graphics.Color(0, 0, 0, 100));
             text.SetWidth(100);
             text.SetHeight(60);
 
