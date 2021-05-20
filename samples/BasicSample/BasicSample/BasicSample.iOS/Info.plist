@@ -34,5 +34,15 @@
     <string>BasicSample</string>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>NSCameraUsageDescription</key>
+	<string>bla</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>New Entry</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>New Entry</string>
+	<key>NSLocationUsageDescription</key>
+	<string>New Entry</string>
+	<key>NSMotionUsageDescription</key>
+	<string>New Entry</string>
 </dict>
 </plist>
