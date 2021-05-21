@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.awesome7.basicsample" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="28" android:targetSdkVersion="29" />
+	<application android:label="Create3dModel.Android" android:theme="@style/MainTheme">
+		<meta-data android:name="com.google.ar.core" android:value="required" />
+	</application>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-feature android:name="android.hardware.camera.ar" />
+</manifest>

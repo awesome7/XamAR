@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
 using UIKit;
 
-namespace BasicSample.iOS
+namespace Create3dModel.iOS
 {
     public class Application
     {
@@ -14,10 +14,6 @@ namespace BasicSample.iOS
         {
             // if you want to use a different Application Delegate class from "AppDelegate"
             // you can specify it here.
-
-            //TODO
-            throw new NotImplementedException("BasicSample for iOS not implemented yet!");
-
             UIApplication.Main(args, null, "AppDelegate");
         }
     }
