@@ -41,7 +41,7 @@ steps:
 - task: PowerShell@2
   inputs:
     filePath: 'pipelines/CheckBuildNative.ps1'
-    arguments: '$(BuildQueue)'
+    arguments: '-projects $(BuildQueue)'
 
 - task: NuGetToolInstaller@1
   displayName: 'Install NuGet'
@@ -67,7 +67,7 @@ steps:
     platform: 'AnyCPU'
     configuration: '$(BuildConfiguration)'
     msbuildArguments: '/t:pack /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)'
-  condition: buildNative
+  condition: eq('${{ variables.buildNative }}', true)
   displayName: 'Build and pack XamAR.Native'
 
 - task: PublishBuildArtifacts@1
