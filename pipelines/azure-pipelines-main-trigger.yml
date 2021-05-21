@@ -11,6 +11,8 @@ variables:
   semanticVersion: $[counter(variables['majorMinorVersion'], 0)]
   projectName: 'XamAR'
   buildConfiguration: 'Release'
+  buildQueue: ''
+  buildNative: false
 
 trigger:
   branches:
@@ -32,19 +34,28 @@ steps:
 #  displayName: 'Select the Xamarin SDK version'
 #  enabled: false
 
+- task: PowerShell@2
+  inputs:
+    filePath: 'pipelines/GetProjectQueue.ps1'
+
+- task: PowerShell@2
+  inputs:
+    filePath: 'pipelines/CheckBuildNative.ps1'
+    arguments: '$(BuildQueue)'
+
 - task: NuGetToolInstaller@1
   displayName: 'Install NuGet'
 
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
-    restoreSolution: '**/*.sln'
+    restoreSolution: 'src/**/*.sln'
     includeNuGetOrg: true
   displayName: 'Restore NuGet packages for solution'
 
 - task: MSBuild@1
   inputs:
-    solution: '**/XamAR.Forms.csproj'
+    solution: 'src/**/XamAR.Forms.csproj'
     platform: 'AnyCPU'
     configuration: '$(BuildConfiguration)'
     msbuildArguments: '/t:pack /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)'
@@ -52,10 +63,11 @@ steps:
 
 - task: MSBuild@1
   inputs:
-    solution: '**/XamAR.Native.csproj'
+    solution: 'src/**/XamAR.Native.csproj'
     platform: 'AnyCPU'
     configuration: '$(BuildConfiguration)'
     msbuildArguments: '/t:pack /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)'
+  condition: buildNative
   displayName: 'Build and pack XamAR.Native'
 
 - task: PublishBuildArtifacts@1
