@@ -50,8 +50,8 @@ namespace XamAR.Platform.Android.Sceneform.Factories
 
             text.SetTextColor(global::Android.Graphics.Color.AliceBlue);
             text.SetBackgroundColor(new global::Android.Graphics.Color(0, 0, 0, 100));
-            text.SetWidth(100);
-            text.SetHeight(60);
+            //text.SetWidth(100);
+            //text.SetHeight(60);
 
             DrawableNode drawableNode = new DrawableNode(nodeText);
             ViewRenderable.InvokeBuilder()
