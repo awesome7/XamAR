@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ar="clr-namespace:XamAR.UI.Forms.Views;assembly=XamAR.UI.Forms"
+             x:Class="BasicSample.MainPage">
+
+    <StackLayout>
+        <Grid Padding="0" >
+                <Image Source="awesome7.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                <Label Text="Welcome to XamAR.Forms!" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                       TextColor="Black" FontAttributes="Bold" 
+                       Padding="0" FontSize="36"/>
+        </Grid>
+        <ar:ARView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+    </StackLayout>
+
+</ContentPage>
