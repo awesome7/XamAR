@@ -21,9 +21,9 @@ namespace CreatePOI
         {
             base.OnAppearing();
 
-            // Brankov's bridge, Belgrade, Serbia.
+            // Branko's bridge, Belgrade, Serbia.
             var location = new Location(44.814846, 20.447514);
-            string title = "Brankov's bridge";
+            string title = "Branko's bridge";
             // Keep reference to created object, to be
             // able to manipulate it later on.
             var obj = XamAR.World.Instance.AddPointOfInterest(location, title);
