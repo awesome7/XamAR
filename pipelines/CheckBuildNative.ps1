@@ -6,4 +6,4 @@ $env:BUILDQUEUE.Split(';') | ForEach-Object {
     }
 }
 
-Write-Host "##vso[task.setvariable variable=BUILDNATIVE;isOutput=true]$global:buildNative"
+Write-Host "##vso[task.setvariable variable=BUILDNATIVE]$global:buildNative"
