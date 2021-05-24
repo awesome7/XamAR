@@ -40,4 +40,4 @@ $editedFiles | ForEach-Object {
 }
 
 Write-Host "Build Queue: $global:buildQueueVariable"
-Write-Host "##vso[task.setvariable variable=buildQueue;isOutput=true]$global:buildQueueVariable"
+Write-Host "##vso[task.setvariable variable=BUILDQUEUE;isOutput=true]$global:buildQueueVariable"
