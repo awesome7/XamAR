@@ -8,4 +8,4 @@ $projects.Split(';') | ForEach-Object {
     }
 }
 
-Write-Host "##vso[task.setvariable variable=buildNative;isOutput=true]$global:buildNative"
+Write-Host "##vso[task.setvariable variable=buildNative;isOutput=true]"$global:buildNative""
