@@ -11,8 +11,6 @@ variables:
   semanticVersion: $[counter(variables['majorMinorVersion'], 0)]
   projectName: 'XamAR'
   buildConfiguration: 'Release'
-  buildQueue: ''
-  buildNative: false
 
 trigger:
   branches:
