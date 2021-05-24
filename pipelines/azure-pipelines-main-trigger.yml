@@ -66,7 +66,7 @@ steps:
     platform: 'AnyCPU'
     configuration: '$(BuildConfiguration)'
     msbuildArguments: '/t:pack /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)'
-  condition: eq('${{ variables['BUILDNATIVE'] }}', 'true')
+  condition: eq(variables['BUILDNATIVE'], 'True')
   displayName: 'Build and pack XamAR.Native'
 
 - task: PublishBuildArtifacts@1
