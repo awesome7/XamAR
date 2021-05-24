@@ -41,7 +41,6 @@ steps:
 - task: PowerShell@2
   inputs:
     filePath: 'pipelines/CheckBuildNative.ps1'
-    arguments: '-projects $(buildQueue)'
 
 - task: NuGetToolInstaller@1
   displayName: 'Install NuGet'
