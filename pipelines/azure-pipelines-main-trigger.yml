@@ -37,6 +37,8 @@ steps:
 - task: PowerShell@2
   inputs:
     filePath: 'pipelines/GetProjectQueue.ps1'
+  env: 
+    PAT: $(PAT)
 
 - task: PowerShell@2
   inputs:

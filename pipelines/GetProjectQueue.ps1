@@ -25,7 +25,7 @@ if ($env:BUILDQUEUEINIT)
 
 # https://stackoverflow.com/a/63418864/1518596
 # Get all files that were changed
-$azureDevOpsAuthenicationHeader = @{Authorization = 'Basic ' + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$env:PAT")) }
+$azureDevOpsAuthenicationHeader = @{Authorization = 'Basic ' + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":${PAT}")) }
 $url = "https://dev.azure.com/${organizationName}/Public/_apis/build/latest/${definitionId}?branchName=main&api-version=6.0-preview.1"
 
 $response = (Invoke-RestMethod -Uri $url -Method GET -Headers $azureDevOpsAuthenicationHeader)
