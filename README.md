@@ -14,8 +14,8 @@ XamAR can be used in Xamarin.Forms app, and native on Android and iOS (iPhone an
 If you are found in an empty room, using AR you can put a table (as 3d model) in the center of room, and observe it through the device's camera. You can move device around, walk around the room - table will stay in the same place all the time, and appear as if it really in the room.
 
 To learn more about AR on each platform, visit:
-[Android - Official Overview](https://developers.google.com/ar/develop)
-[iOS - Official Overview](https://developer.apple.com/augmented-reality/)
+[Android - ARCore - Official Overview](https://developers.google.com/ar/develop)
+[iOS - ARKit - Official Overview](https://developer.apple.com/augmented-reality/arkit/)
 
 ### Benefits
 Benefit that XamAR brings, among others, is to use real-world GPS position to add 3d object to AR world (for example, mark position of a building) and allow any user of your application to see that object on same real-world position. More on topic later in this document.
@@ -30,8 +30,9 @@ Benefit that XamAR brings, among others, is to use real-world GPS position to ad
 - Create custom 3d object using desired platform libraries, or use model created with modelling program
 - Move object by updating it's position at any time
 - Override distance of object, setting it to fixed or variable value
-- On Android XamAR is using [Sceneform](https://developers.google.com/sceneform/develop) (currently is archived, and being actively developed, but can be used for many use cases)
-- On iOS XamAR is using [ARKit](https://developer.apple.com/augmented-reality/arkit/)
+- On Android XamAR is using ARCore with [Sceneform](https://developers.google.com/sceneform/develop)  (framework for 3d rendering)
+*currently is archived, and being actively developed, but can be used for many use cases
+- On iOS XamAR is using ARKit with [SceneKit](https://developer.apple.com/documentation/scenekit/) (framework for 3d rendering)
 
 #### Notes
 - Since GPS functionality relies on GPS reading provided by the device, and is limited by precision of GPS receiver which can have margin of error from few meters, all way to tens of meters, current API is considered not to be reliable in scenarios where objects are close to the device (for example, closer than 20 meters, in general case). 
@@ -47,7 +48,7 @@ Followed are basic steps needed to prepare project:
 - Open* MainPage.xaml*
 - Add namespace `xmlns:views="clr-namespace:XamAR.UI.Forms.Views;assembly=XamAR.UI.Forms"` as attribute to ContentPage
 - Add `<views:ARView/>` where you want AR control to appear (note: camera feed will populated complete control)
-- To finish preparation, execute steps Android and/or iOS initialization, depending on platform that will be used. Those can be found below.
+- As the final task, platform that will be used (Android and/or iOS) needs to be initialized. Steps for each platform can be found below.
 
 ### Android
 Open *MainActivity* and in overriden *OnCreate* method insert:
@@ -69,7 +70,6 @@ global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 - Also in *AndroidManifest.xml*  find application tag and insert as subelement:
 `<meta-data android:name="com.google.ar.core" android:value="required" />`
 - Connect [supported ARCore Android device](https://developers.google.com/ar/devices) and select it as Debug target
-- You should be able to run the project now
 
 ### iOS
 Open *AppDelegate* and in overriden *FinishedLaunhcing*  method insert:
@@ -81,8 +81,25 @@ global::Xamarin.Forms.Forms.Init();
 LoadApplication(new App());
 ```
 - In project properties Bundle Signing need to be set - check (instructions)[https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/]
-** moze jos detalja oko pokretanja**
-- Open *Info.plist* with text editor, and add following elements (before *</dict>*) **srediti ovo jos**
-- Connect Visual Studio to Mac (in case when Visual Studio is run on Windows)
-- Select Debug target to your device
-- You should be able to run the project now
+
+### Android - prepare external 3d model
+Sceneform requires model in **.sfb** format, which needs to be created using Android Studio. Instructions can be found on [official documentation](https://developers.google.com/sceneform/develop/import-assets) .
+Next, add created **.sfb** model to Assets directory in the Android project.
+- Make sure to use Android Studio version 3.5 or 3.4, and to have [Sceneform plugin](https://developers.google.com/sceneform/develop/getting-started#import-sceneform-plugin) installed
+
+### iOS - prepare external 3d model
+iOS can use several different formats, without conversion ([SO post](https://stackoverflow.com/a/55879013)) . Directory is needed in iOS project with name *art.scnassets* , which holds all models.
+For example **.obj**: copy *.obj, *.mtl with all texture files inside *art.scnassets* - and that's it!
+
+#### Load model to XamAR
+TODO
+
+### XamAR API
+Main concept:
+- Position - defines position in AR world; this can be position with fixed GPS coordinates, position relative to current device's position (object is always in front of device, even while moving), position relative to another position
+- Direction - defines direction at which model will be oriented to (forward of the model); this can be North (or some angle bearing to the North), another position, towards device, relative to device's current orientation, etc...
+These simple concepts can be combined for creating more complex scenarios.
+
+Simple scenario example:
+- Use GPS position to set 3d model - this can be used to mark some significant landmark, and everybody with same application would be able to see it in AR, on the same real-world position.
+- In addtion, guide arrow can be set in front of the device, with direction to that GPS position, so it is always oriented towards it and can be used as guide to show where that GPS position is. It can guide user to get to the destination marked with the GPS position.
