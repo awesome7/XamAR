@@ -3,8 +3,17 @@
 # XamAR
 [![Build Status](https://dev.azure.com/awesome7/Public/_apis/build/status/awesome7.XamAR?branchName=main)](https://dev.azure.com/awesome7/Public/_build/latest?definitionId=2&branchName=main) [![NuGet Version](https://img.shields.io/nuget/vpre/XamAR.Forms)](https://img.shields.io/nuget/vpre/XamAR.Forms)
 
-Cross-platform Augmented Reality (AR) SDK for Xamarin
-Readme
+XamAR - cross-platform Augmented Reality (AR) SDK for Xamarin. It works with Xamarin.Forms, abstracting native AR frameworks (ARCore-Android and ARKit-iOS) under single GUI project, while all platform-specific operations are implemented in Xamarin native projects (Xamarin.Android and Xamarin.iOS). 
+
+XamAR can also can make connection between real and AR worlds, by assigning GPS coordinates to objects in AR world.
+```cs
+// Location of The Victor monument, Belgrade, Serbia.
+var location = new Location(44.823052, 20.447704);
+string title = "The Victor";
+var poiObject = XamAR.World.Instance.AddPointOfInterest(location, title);
+```
+
+
 ## XamAR Goal
 Main goal of XamAR SDK is to bring AR (augmented reality) world closer to Xamarin developers, including those who are not familiar with AR and math behind it, to enjoy benefits and new opportunities that AR brings to world of mobile devices. 
 XamAR can be used in Xamarin.Forms app (with plans on adding Xamarin.Android and Xamarin.iOS in the future)
@@ -209,12 +218,3 @@ public partial class MainPage : ContentPage
 }
 ```
 
-
-
-
-
-**TODO dodati slike**
-
-**TODO dodati iOS primer za Example2**
-
-**TODO dodati primer za ucitavanje eksternog modela (izgleda jos nije podrzano)**
