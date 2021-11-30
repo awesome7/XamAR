@@ -54,7 +54,7 @@ Benefit that XamAR brings, among others, is to use real-world GPS position to ad
 ### Getting started
 Followed are basic steps needed to prepare project:
 - Create Xamarin Forms project (currently versions 5.0.0.2012)
-- Add nugget *XamAR.Forms* to all projects that will be used
+- Add nuget *XamAR.Forms* to all projects that will be used
 - Open* MainPage.xaml*
 - Add namespace `xmlns:views="clr-namespace:XamAR.UI.Forms.Views;assembly=XamAR.UI.Forms"` as attribute to ContentPage
 - Add `<views:ARView/>` where you want AR control to appear (note: camera feed will populated complete control)
