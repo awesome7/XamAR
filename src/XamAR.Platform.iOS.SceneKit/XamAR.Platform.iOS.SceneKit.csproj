@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="DryIoc.dll">
-      <Version>4.7.8</Version>
+      <Version>4.8.5</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
