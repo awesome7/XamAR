@@ -66,7 +66,7 @@
       <Version>4.7.8</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>5.0.0.2012</Version>
+      <Version>5.0.0.2337+884-sha.8f765bd87-azdo.5638139</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
