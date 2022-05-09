@@ -24,7 +24,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="DryIoc.dll" Version="4.7.8" />
     <ProjectReference Include="..\XamAR.Core\XamAR.Core.csproj" PrivateAssets="All" />
     <ProjectReference Include="..\XamAR.Platform.Core\XamAR.Platform.Core.csproj" PrivateAssets="All" />
