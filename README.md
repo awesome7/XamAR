@@ -70,6 +70,7 @@ XamAR.WorldForms.Init(this, savedInstanceState);
 
 global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 ```
+- Using nuget add Xamarin.Google.ARCore
 - In project properties set minimum version 28 and target version 30
 - Next, open *AndroidManifest.xml* and set permissions:
     
